@@ -13,7 +13,7 @@ const fs = require('fs');
 const PORT = process.env.PORT || 8080
 
 const salt = bcrypt.genSaltSync(10);
-const secret = 'asdfe45we45w345wegw345werjktjwertkj';
+const secret = '';
 
 app.use(express.json())
 
@@ -23,7 +23,7 @@ app.use(cookieParser())
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-mongoose.connect('mongodb+srv://shreenath:test@cluster0.gzvayo4.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('')
 
 app.post('/register', async (req,res) => {
     const {username,password} = req.body;
